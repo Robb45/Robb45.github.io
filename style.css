@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.nav a {
+  margin-left: 1rem;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  min-height: 60vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #9ca3af;
+}
+
+.hero button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: #0ea5e9;
+}
+
+.section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.section p {
+  color: #9ca3af;
+}
+
+.work-card {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+.work-media img,
+.work-media video {
+  width: 100%;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.work-media.text-only {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #111827;
+}
+
+.work-media.text-only p {
+  color: #e5e7eb;
+}
+
+.work-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.work-content p {
+  color: #9ca3af;
+}
+
+#contact ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+#contact li {
+  margin-bottom: 0.25rem;
+}
+
+.footer {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  border-top: 1px solid #1f2937;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .work-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .section {
+    padding: 2.5rem 1.5rem;
+  }
+}
