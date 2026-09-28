@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il mio sito</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            background: #00bcd4;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0097a7;
+        }
+
+        .contenuto {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Il Mio Sito Web</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Chi siamo</a>
+        <a href="#">Servizi</a>
+        <a href="#">Contatti</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Benvenuto!</h1>
+        <p>Questa è una pagina di prova realizzata con HTML e CSS.</p>
+
+        <button onclick="saluta()">Cliccami</button>
+    </section>
+
+    <section class="contenuto">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Struttura la pagina web.</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Permette di personalizzare l'aspetto del sito.</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Aggiunge interattività alla pagina.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 - Il Mio Sito</p>
+    </footer>
+
+    <script>
+        function saluta() {
+            alert("Ciao! Il sito funziona!");
+        }
+    </script>
+
+</body>
+</html>
