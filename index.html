@@ -1,142 +1,104 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio sito</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
-
-        header {
-            background: #222;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background: #333;
-            text-align: center;
-            padding: 12px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        nav a:hover {
-            color: #00bcd4;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .hero h1 {
-            font-size: 45px;
-        }
-
-        .hero p {
-            font-size: 20px;
-        }
-
-        button {
-            padding: 12px 25px;
-            border: none;
-            background: #00bcd4;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0097a7;
-        }
-
-        .contenuto {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            width: 250px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Portfolio di [Il tuo nome]</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-    <header>
-        <h1>Il Mio Sito Web</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Chi siamo</a>
-        <a href="#">Servizi</a>
-        <a href="#">Contatti</a>
+  <header class="header">
+    <div class="logo">[Il tuo nome]</div>
+    <nav class="nav">
+      <a href="#about">Chi sono</a>
+      <a href="#works">Lavori</a>
+      <a href="#contact">Contatti</a>
     </nav>
+  </header>
 
+  <main>
+    <!-- Sezione intro -->
     <section class="hero">
-        <h1>Benvenuto!</h1>
-        <p>Questa è una pagina di prova realizzata con HTML e CSS.</p>
-
-        <button onclick="saluta()">Cliccami</button>
+      <h1>Portfolio di [Il tuo nome]</h1>
+      <p>Testi, video e immagini dei miei lavori creativi.</p>
+      <button onclick="scrollToSection('works')">Guarda i lavori</button>
     </section>
 
-    <section class="contenuto">
-
-        <div class="card">
-            <h2>HTML</h2>
-            <p>Struttura la pagina web.</p>
-        </div>
-
-        <div class="card">
-            <h2>CSS</h2>
-            <p>Permette di personalizzare l'aspetto del sito.</p>
-        </div>
-
-        <div class="card">
-            <h2>JavaScript</h2>
-            <p>Aggiunge interattività alla pagina.</p>
-        </div>
-
+    <!-- Sezione chi sono -->
+    <section id="about" class="section">
+      <h2>Chi sono</h2>
+      <p>
+        Scrivi qui una breve bio: chi sei, cosa fai, che tipo di lavori realizzi,
+        cosa ti interessa comunicare.
+      </p>
     </section>
 
-    <footer>
-        <p>© 2026 - Il Mio Sito</p>
-    </footer>
+    <!-- Sezione lavori -->
+    <section id="works" class="section">
+      <h2>Lavori selezionati</h2>
 
-    <script>
-        function saluta() {
-            alert("Ciao! Il sito funziona!");
-        }
-    </script>
+      <!-- Esempio lavoro con immagine -->
+      <article class="work-card">
+        <div class="work-media">
+          <img src="immagini/progetto1.jpg" alt="Progetto 1" />
+        </div>
+        <div class="work-content">
+          <h3>Titolo progetto 1</h3>
+          <p>
+            Breve descrizione del progetto, obiettivo, ruolo, strumenti usati.
+          </p>
+        </div>
+      </article>
 
+      <!-- Esempio lavoro con video -->
+      <article class="work-card">
+        <div class="work-media">
+          <video controls>
+            <source src="video/progetto2.mp4" type="video/mp4" />
+            Il tuo browser non supporta il video.
+          </video>
+        </div>
+        <div class="work-content">
+          <h3>Titolo progetto video</h3>
+          <p>
+            Descrizione del video: concept, durata, contesto, cosa volevi ottenere.
+          </p>
+        </div>
+      </article>
+
+      <!-- Esempio lavoro solo testo -->
+      <article class="work-card">
+        <div class="work-media text-only">
+          <p>
+            Qui puoi inserire un estratto di un testo, una poesia, un articolo,
+            una sceneggiatura, ecc.
+          </p>
+        </div>
+        <div class="work-content">
+          <h3>Titolo testo</h3>
+          <p>
+            Spiega brevemente il contesto del testo, perché l’hai scritto,
+            cosa rappresenta per te.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sezione contatti -->
+    <section id="contact" class="section">
+      <h2>Contatti</h2>
+      <p>Puoi contattarmi a:</p>
+      <ul>
+        <li><strong>Email:</strong> tuoindirizzo@example.com</li>
+        <li><strong>Instagram:</strong> @tuonome</li>
+        <li><strong>LinkedIn:</strong> link al tuo profilo</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> [Il tuo nome]. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
